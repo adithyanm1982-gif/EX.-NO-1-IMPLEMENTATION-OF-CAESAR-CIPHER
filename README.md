@@ -33,21 +33,20 @@ int main() {
     message[strcspn(message, "\n")] = 0;
 
     printf("Enter the key value: ");
-    scanf(-"%d", &key);-
+    scanf("%d", &key);
 
-    for(i = 0; message[i] != '\0'; ++i) {
+    for (i = 0; message[i] != '\0'; ++i) {
         char ch = message[i];
-        if(ch >= 'a' && ch <= 'z') {
+
+        if (ch >= 'a' && ch <= 'z') {
             ch = (ch - 'a' + key) % 26;
-            if(ch < 0) ch += 26;
-            ch = ch + 'a';
-            message[i] = ch;
-        }
-        else if(ch >= 'A' && ch <= 'Z') {
+            if (ch < 0) ch += 26;
+            message[i] = ch + 'a';
+        } 
+        else if (ch >= 'A' && ch <= 'Z') {
             ch = (ch - 'A' + key) % 26;
-            if(ch < 0) ch += 26;
-            ch = ch + 'A';
-            message[i] = ch;
+            if (ch < 0) ch += 26;
+            message[i] = ch + 'A';
         }
     }
 
@@ -56,7 +55,7 @@ int main() {
 }
 ```
 ## OUTPUT:
-<img width="1141" height="652" alt="image" src="https://github.com/user-attachments/assets/eb44c4f4-92ae-4503-bbb7-9671263302fb" />
+<img width="350" height="171" alt="image" src="https://github.com/user-attachments/assets/367f7831-6861-4d93-90f7-855f8be9a83f" />
 
 ## RESULT :
  Thus the implementation of ceasar cipher had been executed successfully.
